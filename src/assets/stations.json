@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Deep Pressure Music",
+    "url": "https://deep-pressure-music.stream.laut.fm/deep-pressure-music",
+    "tags": [
+      "Deep House"
+    ]
+  },
+  {
+    "name": "Strictly House",
+    "url": "http://radio.strictly.house:9500/stream",
+    "tags": [
+      "Deep House"
+    ]
+  }
+]
