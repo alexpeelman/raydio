@@ -28,7 +28,7 @@ import CountryFlag from "vue-country-flag";
 @Component({ components: CountryFlag })
 export default class Stations extends Vue {
 
-  private get stations(): Array<Stations> {
+  private get stations(): Array<Station> {
     return stations;
   }
 

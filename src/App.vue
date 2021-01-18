@@ -39,7 +39,7 @@ export default class Rudio extends Vue {
     window.top.close();
   }
 
-  private get currentStation(): Station {
+  private get currentStation(): Station | null{
     return this.station;
   }
 
