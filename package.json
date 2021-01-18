@@ -1,7 +1,7 @@
 {
   "name": "Raydio",
   "author": "Alex Peelman",
-  "description": "RayDio is a cage fighter, erm ... I mean a streaming internet radio player.",
+  "description": "Raydio : a small streaming internet radio player",
   "version": "0.1.0",
   "private": true,
   "scripts": {
