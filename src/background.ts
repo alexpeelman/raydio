@@ -17,6 +17,7 @@ async function createWindow() {
     height: 300,
     frame: false,
     titleBarStyle: "hidden",
+    icon: "./public/icon.png",
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info

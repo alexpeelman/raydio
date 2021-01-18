@@ -3,11 +3,10 @@
     <v-app-bar app>
       <v-row class="d-flex align-center" align="center" cl>
         <h2 class="primary--text ">.: <v-icon class="app-icon" large color="primary">mdi-radio</v-icon> :.</h2>
-        <h2 class="ml-2 primary--text">Rudi-O </h2>
+        <h2 class="ml-2 primary--text">Raydio </h2>
       </v-row>
 
       <v-spacer></v-spacer>
-
       <v-icon large color="primary" @click="closeApp">mdi-close</v-icon>
     </v-app-bar>
 
@@ -31,7 +30,7 @@ import { Station } from "@/model/Station";
     Player
   }
 })
-export default class Rudio extends Vue {
+export default class Raydio extends Vue {
 
   private station: Station | null = null;
 

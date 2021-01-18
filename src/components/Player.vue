@@ -1,20 +1,21 @@
 <template>
   <v-main class="ma-0 pa-0 pl-2 pr-2">
-    <v-card elevation="8" outlined class="mt-4">
-      <v-expand-transition>
-        <v-card-title class="headline" v-if="station">{{ station.name }}
-          <span class="ml-1">
-          <v-progress-circular v-if="status === Status.LOADING" indeterminate />
-          <v-btn @click="play" fab  small v-if="status === Status.PAUSED">
-            <v-icon>mdi-play-circle</v-icon>
-          </v-btn>
-          <v-btn @click="pause" color="secondary" small fab v-if="status === Status.PLAYING">
-            <v-icon>mdi-pause-circle</v-icon>
-          </v-btn>
-          </span>
-        </v-card-title>
-      </v-expand-transition>
-    </v-card>
+    <v-expand-transition>
+      <v-card elevation="8" outlined class="mt-4 gradient" >
+        <v-row class="elevation-12 ma-0 pa-0 text-center" align="center">
+          <v-img v-if="station" :src="station.img" contain height="100" :aspect-ratio="16/9"></v-img>
+          <div class="control pl-2">
+            <v-progress-circular v-if="status === Status.LOADING" indeterminate />
+            <v-btn @click="play" color="secondary" large fab v-if="status === Status.PAUSED">
+              <v-icon>mdi-play-circle</v-icon>
+            </v-btn>
+            <v-btn @click="pause" color="secondary" large fab v-if="status === Status.PLAYING">
+              <v-icon>mdi-pause-circle</v-icon>
+            </v-btn>
+          </div>
+        </v-row>
+      </v-card>
+    </v-expand-transition>
     <audio ref="audio">
       <source />
     </audio>
@@ -84,5 +85,13 @@ export default class Player extends Vue {
     }
   }
 }
-
 </script>
+<style lang="scss">
+.control {
+  position: fixed;
+}
+
+.gradient {
+  background-image: linear-gradient(to right top, rgba(100, 115, 201, 0.33), rgba(25, 32, 72, 0.7));
+}
+</style>

@@ -2,6 +2,7 @@
   {
     "name": "Deep Pressure Music",
     "url": "https://deep-pressure-music.stream.laut.fm/deep-pressure-music",
+    "img": "http://deeppressuremusic.com/wp-content/uploads/dpm_logo.png",
     "country": "de",
     "tags": [
       "Deep House"
@@ -10,6 +11,7 @@
   {
     "name": "Strictly House",
     "url": "http://radio.strictly.house:9500/stream",
+    "img": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/6e/3c/109527/1/c300.png",
     "country": "gb",
     "tags": [
       "Deep House"
@@ -17,7 +19,8 @@
   },
   {
     "name": "Deep Mix Moscow",
-    "url": "http://217.160.212.66:8320/stream/1/",
+    "url": "http://85.122.52.5:8128/stream/1/",
+    "img": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/83/f2/1514/c175.png",
     "country": "ru",
     "tags": [
       "Deep House"
@@ -25,6 +28,7 @@
   },
   {
     "name": "Bassdrive",
+    "img" : "https://www.bassdrive.com/images/logo.png",
     "url": "http://chi.bassdrive.co/;stream/1",
     "country": "gb",
     "tags": [
@@ -34,8 +38,10 @@
   {
     "name": "Dub Lounge",
     "url": "http://144.217.129.213:8311/stream/1/",
+    "img": "https://ws.shoutcast.com/images/contacts/5/55e1/55e159af-bbe0-4496-b32b-38ab39f58e46/radios/20aca740-af24-4035-a0d2-a82bec0ebbb6/20aca740-af24-4035-a0d2-a82bec0ebbb6.png",
     "country": "usa",
     "tags": [
+      "USA",
       "Dub",
       "Reggae"
     ]
@@ -43,9 +49,56 @@
   {
     "name": "Deep House Lounge",
     "url": "http://198.15.94.34:8006/stream/1/",
+    "img": "http://www.deephouselounge.com/wp-content/uploads/2016/10/customheader2.png",
     "country": "usa",
     "tags": [
+      "USA",
       "House"
+    ]
+  },
+  {
+    "name": "Radio 1",
+    "url": "http://icecast.vrtcdn.be/radio1-high.mp3",
+    "img": "https://cds.radio1.be/sites/default/files/og_logo/radio1beog.jpg",
+    "country": "be",
+    "tags": [
+      "Belgium",
+      "Public radio",
+      "Pop"
+    ]
+  },
+  {
+    "name": "Klara",
+    "url": "http://icecast.vrtcdn.be/klara-high.mp3",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/VRT_Klara_logo.svg/1280px-VRT_Klara_logo.svg.png",
+    "country": "be",
+    "tags": [
+      "Belgium",
+      "Public radio",
+      "Classic"
+    ]
+  },
+  {
+    "name": "StuBru",
+    "url": "http://icecast.vrtcdn.be/stubru-high.mp3",
+    "img": "https://www.radioguide.fm/uploads/images/radiostation/stubru_logo.png",
+    "country": "be",
+    "tags": [
+      "Belgium",
+      "Public radio",
+      "Rock",
+      "Pop"
+    ]
+  },
+  {
+    "name": "Cafe Del Mar",
+    "url": "https://streams.radio.co/se1a320b47/listen",
+    "img": "https://static-media.streema.com/media/cache/68/89/68890b51a9ca357470007a8890dc2256.jpg",
+    "country": "es",
+    "tags": [
+      "Spain",
+      "Ibiza",
+      "Chillout Ambient"
     ]
   }
 ]

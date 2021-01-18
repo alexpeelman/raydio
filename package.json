@@ -1,7 +1,7 @@
 {
-  "name": "rudio",
+  "name": "Raydio",
   "author": "Alex Peelman",
-  "description": "Rudi-O is a simple streaming internet radio player.",
+  "description": "RayDio is a cage fighter, erm ... I mean a streaming internet radio player.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
