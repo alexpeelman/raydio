@@ -53,8 +53,10 @@ export default class Stations extends Vue {
       return true;
     }
 
-    return station.name.toLocaleLowerCase().indexOf(this.search) >= 0 ||
-      station.tags.filter(tag => tag.toLocaleLowerCase().indexOf(this.search) >= 0).length > 0;
+    const nameMatch = station.name.toLocaleLowerCase().indexOf(this.search) >= 0;
+    const tagMatch = station.tags.filter(tag => tag.toLocaleLowerCase().indexOf(this.search as string) >= 0).length > 0;
+
+    return nameMatch || tagMatch;
   }
 
   @Emit("change:station")
