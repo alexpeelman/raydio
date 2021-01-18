@@ -2,6 +2,7 @@
   {
     "name": "Deep Pressure Music",
     "url": "https://deep-pressure-music.stream.laut.fm/deep-pressure-music",
+    "country": "de",
     "tags": [
       "Deep House"
     ]
@@ -9,8 +10,42 @@
   {
     "name": "Strictly House",
     "url": "http://radio.strictly.house:9500/stream",
+    "country": "gb",
     "tags": [
       "Deep House"
+    ]
+  },
+  {
+    "name": "Deep Mix Moscow",
+    "url": "http://217.160.212.66:8320/stream/1/",
+    "country": "ru",
+    "tags": [
+      "Deep House"
+    ]
+  },
+  {
+    "name": "Bassdrive",
+    "url": "http://chi.bassdrive.co/;stream/1",
+    "country": "gb",
+    "tags": [
+      "DnB"
+    ]
+  },
+  {
+    "name": "Dub Lounge",
+    "url": "http://144.217.129.213:8311/stream/1/",
+    "country": "usa",
+    "tags": [
+      "Dub",
+      "Reggae"
+    ]
+  },
+  {
+    "name": "Deep House Lounge",
+    "url": "http://198.15.94.34:8006/stream/1/",
+    "country": "usa",
+    "tags": [
+      "House"
     ]
   }
 ]

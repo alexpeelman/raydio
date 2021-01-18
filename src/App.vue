@@ -1,22 +1,14 @@
 <template>
   <v-app>
-    <v-app-bar app dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <h2>Rudi-O</h2>
-      </div>
+    <v-app-bar app>
+      <v-row class="d-flex align-center" align="center" cl>
+        <h2 class="primary--text ">.: <v-icon class="app-icon" large color="primary">mdi-radio</v-icon> :.</h2>
+        <h2 class="ml-2 primary--text">Rudi-O </h2>
+      </v-row>
 
       <v-spacer></v-spacer>
 
-      <v-icon @click="closeApp">mdi-close</v-icon>
+      <v-icon large color="primary" @click="closeApp">mdi-close</v-icon>
     </v-app-bar>
 
     <v-main>
@@ -56,8 +48,13 @@ export default class Rudio extends Vue {
   }
 }
 </script>
-<style>
+<style lang="scss">
 html {
   overflow-y: hidden;
+}
+
+.app-icon {
+  position: relative;
+  top: -5px;
 }
 </style>

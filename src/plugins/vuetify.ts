@@ -1,16 +1,18 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
+import colors from 'vuetify/lib/util/colors'
 
 Vue.use(Vuetify);
 
 export default new Vuetify({
   theme: {
+    dark: true,
     options: {
       customProperties: true
     },
     themes: {
-      light: {
-        primary: "#ee44aa",
+      dark: {
+        primary: colors.amber.base,
         secondary: "#424242",
         accent: "#82B1FF",
         error: "#FF5252",
