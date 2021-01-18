@@ -5,7 +5,7 @@
         <v-card-title class="headline" v-if="station">{{ station.name }}
           <span class="ml-1">
           <v-progress-circular v-if="status === Status.LOADING" indeterminate />
-          <v-btn @click="play" fab small class="ml-1" v-if="status === Status.PAUSED">
+          <v-btn @click="play" fab  small v-if="status === Status.PAUSED">
             <v-icon>mdi-play-circle</v-icon>
           </v-btn>
           <v-btn @click="pause" color="secondary" small fab v-if="status === Status.PLAYING">
@@ -25,6 +25,7 @@
 import Vue from "vue";
 import { Component, Prop, Watch } from "vue-property-decorator";
 import { Station } from "@/model/Station";
+import { VSwitch } from "vuetify/lib";
 
 enum Status {
   NONE,
@@ -72,6 +73,14 @@ export default class Player extends Vue {
     if (this.station) {
       this.audioComponent.pause();
       this.status = Status.PAUSED;
+    }
+  }
+
+  public togglePlay() {
+    if (this.status == Status.PAUSED) {
+      this.play();
+    } else if (this.status == Status.PLAYING) {
+      this.pause();
     }
   }
 }

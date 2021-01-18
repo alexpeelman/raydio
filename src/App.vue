@@ -12,7 +12,7 @@
     </v-app-bar>
 
     <v-main>
-      <Player :station="currentStation"/>
+      <Player ref="player" :station="currentStation"/>
       <Stations @change:station="onChangeStation" />
     </v-main>
   </v-app>
@@ -35,6 +35,14 @@ export default class Rudio extends Vue {
 
   private station: Station | null = null;
 
+  private created() {
+    window.addEventListener('keypress', this.togglePlay);
+  }
+
+  private destroyed() {
+    window.removeEventListener('keypress', this.togglePlay);
+  }
+
   private closeApp() {
     window.top.close();
   }
@@ -45,6 +53,12 @@ export default class Rudio extends Vue {
 
   private onChangeStation(station: Station) {
     this.station = station;
+  }
+
+  public togglePlay(e: KeyboardEvent):void {
+    if (e.code == "Space") {
+      (this.$refs.player as Player).togglePlay();
+    }
   }
 }
 </script>
