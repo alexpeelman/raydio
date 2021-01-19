@@ -90,5 +90,16 @@
       "Ibiza",
       "Chillout Ambient"
     ]
+  },
+    {
+    "name": "Radio Shizoid - Dub Techno",
+    "url": "http://94.130.113.214:8000/dubtechno",
+    "img": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/9b/bc/33696/c300.png",
+    "tags": [
+      "India",
+      "Mumbai",
+      "Dub",
+      "Techno"
+    ]
   }
 ]
