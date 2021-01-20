@@ -110,5 +110,36 @@
       "USA",
       "Jazz"     
     ]
+  },
+ {
+    "name": "JOE FM",
+    "url": "https://20723.live.streamtheworld.com/JOE.mp3",
+    "img": "https://s3.eu-central-1.amazonaws.com/radioportals/radioviainternet-be/images/stations/joe-fm-cover.png",
+    "tags": [
+      "Belgium",
+      "Oldies"
+    ]
+  },
+ {
+    "name": "JFK Ibiza",
+    "url": "https://streams.dynamicradiogroup.com/jfkibiza",
+    "img": "https://cdn-profiles.tunein.com/s216836/images/logog.png?t=157133",
+    "tags": [
+      "Ibiza",
+      "Jazz",
+      "Funk",
+      "Cool"
+    ]
+  },
+ {
+    "name": "Radio Stad",
+    "url": "http://stream2.radiostad.org:8344/;stream.nsv",
+    "img": "https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/06/35/6823/1/c300.png",
+    "tags": [
+      "Belgium",
+      "Antwerp",
+      "Pop",
+      "RnB"
+    ]
   }
 ]
