@@ -1,17 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-row class="d-flex align-center" align="center" cl>
-        <h2 class="primary--text ">.: <v-icon class="app-icon" large color="primary">mdi-radio</v-icon> :.</h2>
-        <h2 class="ml-2 primary--text">Raydio </h2>
-      </v-row>
-
-      <v-spacer></v-spacer>
-      <v-icon large color="primary" @click="closeApp">mdi-close</v-icon>
-    </v-app-bar>
-
+    <Player ref="player" :station="station">
+      <v-icon large class="pl-2" fab color="primary" v-if="appMode" @click="closeApp">mdi-close-circle</v-icon>
+    </Player>
     <v-main>
-      <Player ref="player" :station="currentStation"/>
       <Stations @change:station="onChangeStation" />
     </v-main>
   </v-app>
@@ -42,12 +34,12 @@ export default class Raydio extends Vue {
     window.removeEventListener('keypress', this.togglePlay);
   }
 
-  private closeApp() {
-    window.top.close();
+  private get appMode(): boolean {
+    return (process.env.IS_ELECTRON || false) as boolean;
   }
 
-  private get currentStation(): Station | null{
-    return this.station;
+  private closeApp() {
+    window.top.close();
   }
 
   private onChangeStation(station: Station) {
@@ -63,7 +55,16 @@ export default class Raydio extends Vue {
 </script>
 <style lang="scss">
 html {
-  overflow-y: hidden;
+  background: #121212;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .app-icon {

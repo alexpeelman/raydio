@@ -1,25 +1,25 @@
 <template>
-  <v-main class="ma-0 pa-0 pl-2 pr-2">
-    <v-expand-transition>
-      <v-card elevation="8" outlined class="mt-4 gradient" >
-        <v-row class="elevation-12 ma-0 pa-0 text-center" align="center">
-          <v-img v-if="station" :src="station.img" contain height="100" :aspect-ratio="16/9"></v-img>
-          <div class="control pl-2">
-            <v-progress-circular v-if="status === Status.LOADING" indeterminate />
-            <v-btn @click="play" color="secondary" large fab v-if="status === Status.PAUSED">
-              <v-icon>mdi-play-circle</v-icon>
-            </v-btn>
-            <v-btn @click="pause" color="secondary" large fab v-if="status === Status.PLAYING">
-              <v-icon>mdi-pause-circle</v-icon>
-            </v-btn>
-          </div>
-        </v-row>
-      </v-card>
-    </v-expand-transition>
+  <v-app-bar app class="gradient" height="100">
+    <v-row class="d-flex align-center" align="center" cl>
+      <h4 class="primary--text ">.: <v-icon class="app-icon" large color="primary">mdi-radio</v-icon> :.</h4>
+      <h4 class="ml-2 primary--text">Raydio </h4>
+      <v-spacer></v-spacer>
+      <v-fade-transition v-if="status !== Status.LOADING">
+        <v-img v-if="station && station.img" :src="station.img" contain height="80" :aspect-ratio="16/9"></v-img>
+        <h1 v-if="station && !station.img" :src="station.img" >{{station.name}}</h1>
+      </v-fade-transition>
+      <v-spacer></v-spacer>
+      <div class="control text-right pr-2">
+        <v-progress-circular small v-if="status === Status.LOADING" indeterminate color="primary"/>
+          <v-icon large @click="play" color="primary" v-if="status === Status.PAUSED">mdi-play-circle</v-icon>
+          <v-icon large @click="pause" color="primary" v-if="status === Status.PLAYING">mdi-pause-circle</v-icon>
+        <slot></slot>
+      </div>
+    </v-row>
     <audio ref="audio">
       <source />
     </audio>
-  </v-main>
+  </v-app-bar>
 </template>
 
 <script lang="ts">
@@ -51,6 +51,7 @@ export default class Player extends Vue {
   @Watch("station")
   private stationChanged(): void {
     if (this.station) {
+      this.status = Status.LOADING;
       this.audioComponent.src = this.station?.url;
       this.play();
     }
@@ -58,7 +59,6 @@ export default class Player extends Vue {
 
   private play() {
     if (this.station) {
-      this.status = Status.LOADING;
       this.audioComponent
         .play()
         .catch((error) => {
@@ -88,7 +88,11 @@ export default class Player extends Vue {
 </script>
 <style lang="scss">
 .control {
-  position: fixed;
+  min-width: 80px;
+}
+
+.v-toolbar, .v-toolbar__content {
+  //height: 108px !important;
 }
 
 .gradient {

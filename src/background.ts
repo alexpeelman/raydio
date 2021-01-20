@@ -12,6 +12,8 @@ protocol.registerSchemesAsPrivileged([
 ]);
 
 async function createWindow() {
+  process.env.VUE_APP_APP_MODE = "true";
+
   // Create the browser window.
   const win = new BrowserWindow({
     width: 340,

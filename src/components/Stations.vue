@@ -3,13 +3,14 @@
     <h2 class="pa-0 ma-0 mb-2 primary--text">Stations</h2>
     <v-text-field
         v-model="search"
-        class="mr-2"
+        class="mr-2 mb-3"
         append-icon="mdi-magnify"
         outlined
-        placeholder="Search"
+        hide-details
+        placeholder="Filter"
     >
     </v-text-field>
-    <v-layout row wrap class="ma-0 pa-0">
+    <v-layout row wrap class="ma-0 pa-0" align-content-start>
       <v-flex
           v-for="(station, $index) in stations"
           class="mx-auto mb-2"
@@ -65,7 +66,7 @@ export default class Stations extends Vue {
         .then(response => response.json())
         .then((remoteStations: Array<Station>) => {
           return remoteStations.filter(
-              r => !stationNames.find(name => name == r.name)
+              r => !stationNames.find(name => name === r.name)
           );
         })
         .then((filteredRemoteStations: Array<Station>) => {
@@ -81,11 +82,9 @@ export default class Stations extends Vue {
       return true;
     }
 
-    const nameMatch =
-        station.name.toLocaleLowerCase().indexOf(this.search) >= 0;
-    const tagMatch =
-        station.tags.filter(
-            tag => tag.toLocaleLowerCase().indexOf(this.search as string) >= 0
+    const nameMatch = station.name.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+    const tagMatch = station.tags.filter(
+            tag => tag.toLowerCase().indexOf(this.search?.toLowerCase() as string) >= 0
         ).length > 0;
 
     return nameMatch || tagMatch;
