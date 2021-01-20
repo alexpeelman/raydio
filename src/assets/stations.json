@@ -141,5 +141,14 @@
       "Pop",
       "RnB"
     ]
+  },
+ {
+    "name": "StuBru - Bruut",
+    "url": "http://icecast.vrtcdn.be/stubru_bruut-high.mp3",
+    "img": "https://radioplayer.vrt.be/bruut/programme_image.png",
+    "tags": [
+      "Belgium",
+      "Metal"
+    ]
   }
 ]
