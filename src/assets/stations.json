@@ -150,5 +150,14 @@
       "Belgium",
       "Metal"
     ]
+  },
+  {
+    "name": "StuBru - Untz",
+    "url": "http://icecast.vrtcdn.be/stubru_untz-high.mp3",
+    "img": "https://radioplayer.vrt.be/untz/programme_image.png",
+    "tags": [
+      "Belgium",
+      "Dance"
+    ]
   }
 ]
