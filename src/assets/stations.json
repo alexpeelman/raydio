@@ -168,5 +168,17 @@
       "Dub",
       "Bermuda"
     ]
+  },
+    {
+    "name": "Pure Ibiza Radio",
+    "url": "https://pureibizaradio.clubbingradios.com:9518/PureIbizaRadio",
+    "img": "https://i1.sndcdn.com/avatars-BnGkTLYlMA6NDyEr-pm3lag-t500x500.jpg",
+    "tags": [
+      "Ibiza",
+      "Dance"
+      "Club",
+      "House",
+      "Deep House"
+    ]
   }
 ]
