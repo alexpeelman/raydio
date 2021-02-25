@@ -180,5 +180,15 @@
       "House",
       "Deep House"
     ]
+  },
+  {
+    "name": "OpenLab.FM",
+    "url": "https://ice04.fluidstream.net/openlab.mp3",
+    "img": "https://openlab.fm/img/openlab-logo.svg",
+    "tags": [
+      "Ibiza",
+      "Experimental"      
+    ]
   }
+  
 ]
