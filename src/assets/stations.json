@@ -189,6 +189,14 @@
       "Ibiza",
       "Experimental"      
     ]
+  },
+  {
+    "name": "Blue Marlin Ibiza",
+    "url": "https://ice1.viastreaming.net:8443/live",
+    "img": "https://welcometoibiza.com/wp-content/uploads/Blue_Marlin_Ibiza_logo-guia-welcometoibiza-2016-1.jpg",
+    "tags": [
+      "Ibiza"
+    ]
   }
   
 ]
